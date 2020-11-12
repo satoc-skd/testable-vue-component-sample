@@ -12,7 +12,8 @@ Node.js v14.15.0
 - https://vue-test-utils.vuejs.org/ja/api/wrapper/setMethods.html
 - https://vue-test-utils.vuejs.org/ja/api/wrapper/find.html
 
-躓き的な要因となりうる為、警告が出ない方法に適宜置換していきます。
+特に初学者はNode.jsやモジュールのバージョンミスマッチを意識していない事もあり、場合によっては躓き石になると思われます。
+適宜、警告が出ない方法に置換していきます。
 
 
 ## Project setup
