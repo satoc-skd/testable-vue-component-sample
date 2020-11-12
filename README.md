@@ -1,5 +1,8 @@
 # SampleProject
 
+## 開発環境
+Node.js v14.15.0
+
 ## ToDo
 最新版（2020.11.11時点ではv1.1.1）のVue Test Utilsでは、以下のメソッドを使うと警告が飛んできます。
 - wrapper.setMethods()
