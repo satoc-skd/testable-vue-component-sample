@@ -43,18 +43,20 @@ describe("GlobalHeader.vue", () => {
   describe("template", () => {
     it("@click=navigateRoot", () => {
       const mock = jest.fn()
-      const wrapper = shallowMount(GlobalHeader, { store, localVue })
-      wrapper.setMethods({
-        navigateRoot: mock,
+      const wrapper = shallowMount(GlobalHeader, {
+        store,
+        localVue,
+        methods: { navigateRoot: mock },
       })
       wrapper.find(".GlobalHeader_SiteTitle").trigger("click")
       expect(mock).toHaveBeenCalled()
     })
     it("@clickMenuItem=onClickMenuItem", () => {
       const mock = jest.fn()
-      const wrapper = shallowMount(GlobalHeader, { store, localVue })
-      wrapper.setMethods({
-        onClickMenuItem: mock,
+      const wrapper = shallowMount(GlobalHeader, {
+        store,
+        localVue,
+        methods: { onClickMenuItem: mock },
       })
       const menu = wrapper.find(Menu)
       menu.vm.$emit("clickMenuItem")

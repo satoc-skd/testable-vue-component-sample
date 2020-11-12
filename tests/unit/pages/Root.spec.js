@@ -34,9 +34,11 @@ describe("Root.vue", () => {
   describe("template", () => {
     it("@navigate=onNavigate", () => {
       const mock = jest.fn()
-      const wrapper = shallowMount(Root, { store, localVue, mocks: { $router } })
-      wrapper.setMethods({
-        onNavigate: mock,
+      const wrapper = shallowMount(Root, {
+        store,
+        localVue,
+        mocks: { $router },
+        methods: { onNavigate: mock },
       })
       const globalHeader = wrapper.find(GlobalHeader)
       // "navigate"イベントをemitする

@@ -24,11 +24,8 @@ describe("MenuItem.vue", () => {
     it("@click=clickMenuItem", () => {
       // モック関数の作成
       const mock = jest.fn()
-      const wrapper = shallowMount(MenuItem, { propsData })
       // clickMenuItem()をmockに置き換える
-      wrapper.setMethods({
-        clickMenuItem: mock,
-      })
+      const wrapper = shallowMount(MenuItem, { propsData, methods: { clickMenuItem: mock } })
       // DOMを探してクリックする
       wrapper.find(".MenuItem_Label").trigger("click")
       // mockが呼ばれているか

@@ -33,11 +33,8 @@ describe("Menu.vue", () => {
   // mountによる結合テスト
   it("@clickMenuItem=onClickMenuItem", () => {
     const mock = jest.fn()
-    const wrapper = mount(Menu, { propsData })
     // onClickMenuItemをmockに差し替える
-    wrapper.setMethods({
-      onClickMenuItem: mock,
-    })
+    const wrapper = mount(Menu, { propsData, methods: { onClickMenuItem: mock } })
     // MenuItemコンポーネントを探す
     const menuItem = wrapper.find(MenuItem)
     // "clickMenuItem"イベントをemitする関数を実行
